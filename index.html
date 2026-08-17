@@ -7,6 +7,25 @@
     <link rel="stylesheet" href="style.css">
     <!-- Link per una libreria di galleria (opzionale ma consigliata) -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+
+  <style>
+    /* Dimensioni del carosello */
+    .swiper {
+      width: 100%;
+      max-width: 800px;
+      height: 400px;
+      margin: 20px auto;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    .swiper-slide img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  </style>
+    
 </head>
 <body>
 
@@ -26,6 +45,42 @@
         </div>
     </header>
 
+<!-- Struttura del Carosello -->
+  <div class="swiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide"><img src="images/foto1.jpg" alt="Foto 1"></div>
+      <div class="swiper-slide"><img src="images/foto2.jpg" alt="Foto 2"></div>
+      <div class="swiper-slide"><img src="images/foto3.jpg" alt="Foto 3"></div>
+    </div>
+    
+    <!-- Paginazione e Frecce di navigazione -->
+    <div class="swiper-pagination"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+  </div>
+
+  <!-- JavaScript di Swiper via CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <!-- Inizializzazione Swiper -->
+  <script>
+    const swiper = new Swiper('.swiper', {
+      loop: true,
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
+  </script>
+    
     <!-- AREA PRINCIPALE DELLA HOMEPAGE -->
     <main class="container">
 
