@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Il Mio Sito su GitHub Pages</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Link per una libreria di galleria (opzionale ma consigliata) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+</head>
+<body>
+
+    <!-- MENÙ DI NAVIGAZIONE SUPERIORE -->
+    <header>
+        <div class="container">
+            <h1 class="logo">Sito dell'Autore</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="#">Progetti</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Chi Sono</a></li>
+                    <li><a href="#">Contatti</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- AREA PRINCIPALE DELLA HOMEPAGE -->
+    <main class="container">
+
+        <!-- 1. GALLERIA A ROTAZIONE (USANDO SWIPER.JS) -->
+        <!-- Sostituisci le immagini placeholder con le tue -->
+        <section class="gallery-section swiper mySwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="https://via.placeholder.com/1200x500?text=Slide+1" alt="Slide 1"></div>
+                <div class="swiper-slide"><img src="https://via.placeholder.com/1200x500?text=Slide+2" alt="Slide 2"></div>
+                <div class="swiper-slide"><img src="https://via.placeholder.com/1200x500?text=Slide+3" alt="Slide 3"></div>
+            </div>
+            <!-- Pulsanti di navigazione -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <!-- Paginazione -->
+            <div class="swiper-pagination"></div>
+        </section>
+
+        <!-- 2. LAYOUT A 3 COLONNE -->
+        <section class="grid-section">
+            <div class="column">
+                <h2>Servizi</h2>
+                <p>Breve descrizione del primo servizio o progetto. Mostra cosa offri.</p>
+            </div>
+            <div class="column">
+                <h2>Ultime Notizie</h2>
+                <p>Aggiornamenti recenti dal blog o annunci importanti.</p>
+            </div>
+            <div class="column">
+                <h2>Risorse</h2>
+                <p>Link utili o download disponibili per i visitatori.</p>
+            </div>
+        </section>
+
+        <!-- 3. BOX DESCRIZIONE AUTORE (IN BASSO) -->
+        <section class="author-box">
+            <div class="author-image-container">
+                <!-- Sostituisci con la tua immagine: assets/images/tuo-profilo.jpg -->
+                <img src="https://via.placeholder.com/150" alt="Immagine dell'Autore" class="author-photo">
+            </div>
+            <div class="author-bio">
+                <h3>Informazioni sull'Autore</h3>
+                <p>Ciao! Sono un appassionato di sviluppo web e design. In questo box puoi inserire la tua biografia, raccontare la tua storia e condividere i tuoi interessi. Questo layout ti permette di presentarti in modo professionale.</p>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER SEMPLICE -->
+    <footer>
+        <p>&copy; 2024 Il Mio Nome. Ospitato con orgoglio su GitHub Pages.</p>
+    </footer>
+
+    <!-- Script per Swiper.js (galleria) -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        // Inizializzazione della galleria Swiper
+        var swiper = new Swiper(".mySwiper", {
+            loop: true,
+            pagination: { el: ".swiper-pagination", clickable: true },
+            navigation: { nextEl: ".swiper-button-next", prevEl: ".swiper-button-prev" },
+            autoplay: { delay: 4000, disableOnInteraction: false }, // Autoplay opzionale
+        });
+    </script>
+
+</body>
+</html>
+File 2: style.css
+Questo file definisce l'aspetto grafico e il layout del tuo sito.
+
+/* STILI GENERALI */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    color: #333;
+    background-color: #f9f9f9;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* MENÙ SUPERIORE */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo { margin: 0; font-size: 1.5rem; }
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li { margin-left: 20px; }
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 4px;
+}
+
+nav ul li a:hover, nav ul li a.active {
+    background-color: #555;
+}
+
+/* MAIN CONTENT */
+main {
+    margin-top: 100px; /* Spazio per il menù fisso */
+    padding-bottom: 40px;
+}
+
+/* 1. GALLERIA SWIPER */
+.gallery-section {
+    margin-bottom: 40px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.swiper-slide img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* 2. GRID A 3 COLONNE */
+.grid-section {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.column {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #eee;
+}
+
+.column h2 { color: #444; border-bottom: 2px solid #555; padding-bottom: 10px; }
+
+/* 3. BOX AUTORE */
+.author-box {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    border: 1px solid #eee;
+    margin-top: auto; /* Spinge il box in basso se il contenuto è scarso */
+}
+
+.author-image-container {
+    flex: 0 0 150px; /* Dimensioni fisse per l'immagine */
+    margin-right: 30px;
+}
+
+.author-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%; /* Immagine circolare */
+    object-fit: cover; /* Mantiene le proporzioni */
+}
+
+.author-bio h3 { margin-top: 0; color: #444; }
+
+/* FOOTER */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1.5rem 0;
+}
+
+/* RESPONSIVE DESIGN (per mobile) */
+@media (max-width: 768px) {
+    header .container { flex-direction: column; text-align: center; }
+    nav ul { margin-top: 10px; flex-wrap: wrap; justify-content: center; }
+    nav ul li { margin: 5px; }
+    .logo { margin-bottom: 10px; }
+    .grid-section { grid-template-columns: 1fr; }
+    .author-box { flex-direction: column; text-align: center; }
+    .author-image-container { margin-right: 0; margin-bottom: 20px; }
+}
