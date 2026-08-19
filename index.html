@@ -47,7 +47,7 @@
             </section>
             
             <!-- Struttura dello Slider -->
-              <div class="swiper">
+            <div class="swiper">
                 <div class="swiper-wrapper">
                   <div class="swiper-slide"><img src="https://picsum.photos/800/400?random=1" alt="Slide 1"></div>
                   <div class="swiper-slide"><img src="https://picsum.photos/800/400?random=2" alt="Slide 2"></div>
@@ -57,23 +57,24 @@
                 <div class="swiper-pagination"></div>
                 <div class="swiper-button-prev"></div>
                 <div class="swiper-button-next"></div>
-              </div>
+            </div>
             
-              <!-- JS di Swiper tramite CDN -->
-              <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+            <!-- JS di Swiper tramite CDN -->
+            <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
             
-              <!-- Inizializzazione -->
-              <script>
+            <!-- Inizializzazione -->
+            <script>
                 const swiper = new Swiper('.swiper', {
                   loop: true,
                   autoplay: { delay: 3000 },
                   pagination: { el: '.swiper-pagination', clickable: true },
                   navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' },
                 });
-              </script>
-            
-                <!-- 3. BOX DESCRIZIONE AUTORE (IN BASSO) -->
-                <section class="author-box">
+            </script>
+
+            <div></div>
+            <!-- 3. BOX DESCRIZIONE AUTORE (IN BASSO) -->
+            <section class="author-box">
                     <div class="author-image-container">
                         <!-- Sostituisci con la tua immagine: assets/images/tuo-profilo.jpg -->
                         <img src="images/logo.jpeg" alt="Immagine dell'Autore" class="author-photo">
@@ -82,7 +83,11 @@
                         <h3>Informazioni sull'Autore</h3>
                         <p>Ciao! Sono un appassionato di sviluppo web e design. In questo box puoi inserire la tua biografia, raccontare la tua storia e condividere i tuoi interessi. Questo layout ti permette di presentarti in modo professionale.</p>
                     </div>
-                </section>
+            </section>
+
+            <section class="grid-single-section">
+                <div></div>
+            </section>    
         </main>
     
         <!-- FOOTER SEMPLICE -->
