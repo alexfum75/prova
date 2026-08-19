@@ -66,15 +66,14 @@ main {
     overflow: hidden;
 }
 
+/* 2. GRID A 1 COLONNA */
 .grid-single-section {
     display: grid;
     grid-template-columns: 1fr; /* Imposta 1 sola colonna */
     gap: 20px;
-    width: 100%;
     margin-bottom: 40px;
 }
 
-/* Stile base opzionale per le schede interne */
 .grid-item {
     background: #fff;
     padding: 20px;
