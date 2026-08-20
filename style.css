@@ -66,10 +66,18 @@ main {
     overflow: hidden;
 }
 
-/* GRID A 1 COLONNA */
+/* GRID A 1 COLONNE */
 .grid-single-section {
     display: grid;
-    grid-template-columns: 1fr; /* Imposta 1 sola colonna */
+    grid-template-columns: repeat(1, 1fr);
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+/* GRID A 2 COLONNE */
+.grid-double-section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     gap: 20px;
     margin-bottom: 40px;
 }
@@ -154,3 +162,51 @@ footer {
     .author-box { flex-direction: column; text-align: center; }
     .author-image-container { margin-right: 0; margin-bottom: 20px; }
 }
+
+           .main-wrapper {
+                display: flex;
+                gap: 30px;
+                align-items: flex-start;
+                margin-top: 20px;
+                margin-bottom: 20px;
+            }
+            
+            .content-area {
+                flex: 3;
+                min-width: 0; /* Previene problemi di overflow con lo Swiper */
+            }
+            
+            .sidebar {
+                flex: 1;
+                background-color: #f9f9f9;
+                padding: 20px;
+                border-radius: 8px;
+                border: 1px solid #ddd;
+            }
+            
+            .sidebar-widget {
+                margin-bottom: 25px;
+            }
+            
+            .sidebar-widget h3 {
+                margin-top: 0;
+                border-bottom: 2px solid #ccc;
+                padding-bottom: 5px;
+            }
+            
+            /* Stile per fare occupare l'intera larghezza alla sezione autore */
+            .author-box-full {
+                width: 100%;
+                margin-top: 30px;
+                margin-bottom: 30px;
+            }
+
+            /* Layout Mobile */
+            @media (max-width: 768px) {
+                .main-wrapper {
+                    flex-direction: column;
+                }
+                .sidebar {
+                    width: 100%;
+                }
+            }
