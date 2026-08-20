@@ -59,14 +59,14 @@ main {
     padding-bottom: 40px;
 }
 
-/* 1. GALLERIA SWIPER */
+/* GALLERIA SWIPER */
 .gallery-section {
     margin-bottom: 40px;
     border-radius: 8px;
     overflow: hidden;
 }
 
-/* 2. GRID A 1 COLONNA */
+/* GRID A 1 COLONNA */
 .grid-single-section {
     display: grid;
     grid-template-columns: 1fr; /* Imposta 1 sola colonna */
@@ -81,7 +81,7 @@ main {
     border: 1px solid #eee;
 }
 
-/* 2. GRID A 3 COLONNE */
+/* GRID A 3 COLONNE */
 .grid-section {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
