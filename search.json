@@ -1,0 +1,23 @@
+[
+  {
+    "objectID": "libro/index.html",
+    "href": "libro/index.html",
+    "title": "Introduzione al Libro",
+    "section": "",
+    "text": "Benvenuti nella Guida\nQuesto capitolo introduce l’argomento trattato nel libro. Usa la barra laterale per navigare tra i capitoli."
+  },
+  {
+    "objectID": "libro/capitolo1.html",
+    "href": "libro/capitolo1.html",
+    "title": "Capitolo 1: I Primi Passi",
+    "section": "",
+    "text": "Qui inizia il contenuto vero e proprio del tuo libro…"
+  },
+  {
+    "objectID": "libro/capitolo1.html#concetti-base",
+    "href": "libro/capitolo1.html#concetti-base",
+    "title": "Capitolo 1: I Primi Passi",
+    "section": "",
+    "text": "Qui inizia il contenuto vero e proprio del tuo libro…"
+  }
+]

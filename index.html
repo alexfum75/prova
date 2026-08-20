@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="it">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Il Mio Sito su GitHub Pages</title>
+        <link rel="stylesheet" href="style.css">
+        <!-- Link per una libreria di galleria (opzionale ma consigliata) -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>   
+        
+        <!-- CSS per il layout a due colonne (Spostalo nel tuo style.css) -->
+    </head>
+
+    <body>      
+        <!-- MENÙ DI NAVIGAZIONE SUPERIORE -->
+        <header>
+            <div class="container">
+                <h1 class="logo">Sito dell'Autore</h1>
+                <nav>
+                    <ul>
+                        <li><a href="index.html" class="active">Home</a></li>
+                        <li><a href="#">Progetti</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="libro/index.html" class="btn-libro">Libro</a></li>
+                        <li><a href="#">Chi Sono</a></li>
+                        <li><a href="#">Contatti</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        
+        <!-- CONTENITORE PRINCIPALE CON SIDEBAR A DESTRA -->
+        <div class="container main-wrapper">
+            
+            <!-- AREA CENTRALE -->
+            <main class="content-area">
+                <!-- 2. LAYOUT A 3 COLONNE -->
+                <section class="grid-section">
+                    <div class="column">
+                        <h2>Servizi</h2>
+                        <p>Breve descrizione del primo servizio o progetto. Mostra cosa offri.</p>
+                    </div>
+                    <div class="column">
+                        <h2>Ultime Notizie</h2>
+                        <p>Aggiornamenti recenti dal blog o annunci importanti.</p>
+                    </div>
+                    <div class="column">
+                        <h2>Risorse</h2>
+                        <p>Link utili o download disponibili per i visitatori.</p>
+                    </div>
+                </section>
+                
+                <!-- Struttura dello Slider -->
+                <div class="swiper">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide"><img src="https://picsum.photos/800/400?random=1" alt="Slide 1"></div>
+                      <div class="swiper-slide"><img src="https://picsum.photos/800/400?random=2" alt="Slide 2"></div>
+                      <div class="swiper-slide"><img src="https://picsum.photos/800/400?random=3" alt="Slide 3"></div>
+                    </div>
+                    <!-- Paginazione e Frecce -->
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                </div>
+                
+                <!-- JS di Swiper tramite CDN -->
+                <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+                
+                <!-- Inizializzazione -->
+                <script>
+                    const swiper = new Swiper('.swiper', {
+                      loop: true,
+                      autoplay: { delay: 3000 },
+                      pagination: { el: '.swiper-pagination', clickable: true },
+                      navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' },
+                    });
+                </script>
+                
+      
+
+               <section class="grid-single-section">
+                    <div class="column">
+                        <h2>Servizi</h2>
+                        <p>Breve descrizione del primo servizio o progetto. Mostra cosa offri.</p>
+                    </div>
+                </section>
+            </main>
+
+            <!-- COLONNA DESTRA (SIDEBAR) -->
+            <aside class="sidebar">
+                <div class="sidebar-widget">
+                    <h3>Chi Sono</h3>
+                    <p>Una breve bio da mostrare nella sidebar per catturare l'attenzione dei visitatori.</p>
+                </div>
+                
+                <div class="sidebar-widget">
+                    <h3>Articoli Popolari</h3>
+                    <ul>
+                        <li><a href="#">Come creare un sito statico</a></li>
+                        <li><a href="#">Guida a GitHub Pages</a></li>
+                        <li><a href="#">Introduzione a HTML & CSS</a></li>
+                    </ul>
+                </div>
+
+                <div class="sidebar-widget">
+                    <h3>Newsletter</h3>
+                    <p>Iscriviti per non perdere i prossimi aggiornamenti.</p>
+                    <input type="email" placeholder="La tua email" style="width:100%; padding:8px; margin-top:5px; box-sizing:border-box;">
+                    <button style="width:100%; padding:8px; margin-top:10px; cursor:pointer;">Iscriviti</button>
+                </div>
+            </aside>
+            
+        </div>
+
+        <!-- SEZIONE INFORMAZIONI AUTORE A PIENA LARGHEZZA -->
+        <section class="container author-box-full">
+            <div class="author-box">
+                <div class="author-image-container">
+                    <!-- Sostituisci con la tua immagine: assets/images/tuo-profilo.jpg -->
+                    <img src="images/logo.jpeg" alt="Immagine dell'Autore" class="author-photo">
+                </div>
+                <div class="author-bio">
+                    <h3>Informazioni sull'Autore</h3>
+                    <p>Ciao! Sono un appassionato di sviluppo web e design. In questo box puoi inserire la tua biografia, raccontare la tua storia e condividere i tuoi interessi. Questo layout ti permette di presentarti in modo professionale.</p>
+                </div>
+            </div>
+        </section>
+            
+        <footer>
+            <div class="container">
+                <p>&copy; 2024 Il Mio Nome. Ospitato con orgoglio su GitHub Pages.</p>
+            </div>
+        </footer>
+    </body>
+</html>
